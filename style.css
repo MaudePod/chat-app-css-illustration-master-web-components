@@ -1,0 +1,224 @@
+:root {
+    /*Primary*/
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet-paragraph: hsl(270, 7%, 64%);
+    /*Gradient*/
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+    /*Secondary*/
+    --light-grayish-violet-app-background: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very-light-magenta: hsl(289, 100%, 72%);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik/static/Rubik-Bold.ttf);
+}
+
+body {
+    display: grid;
+    min-height: 100svh;
+    max-width: 100svw;
+    container: body / inline-size;
+    margin: 0;
+    position: relative;
+    font-weight: 500;
+    font-family: 'Rubik';
+}
+
+main {
+    display: grid;
+    height: 100cqh;
+    width: 100cqw;
+    grid-template-columns: auto 1fr;
+    place-items: center;
+    box-sizing: border-box;
+    padding: 10% 20%;
+    column-gap: 50px;
+}
+
+section[class="background-layer"] {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100svw;
+    height: 100svh;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--light-grayish-violet-app-background);
+}
+
+section[class="purple"] {
+    background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
+    height: 90%;
+    border-bottom-right-radius: 255px;
+    border-bottom-left-radius: 153px;
+}
+
+section[class="smart-phone"] {
+    background-color: white;
+    width: 300px;
+    height: 100%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: x-small;
+}
+
+section[class="top"] {
+    height: 100px;
+    display: grid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background: linear-gradient(to left, var(--light-magenta), var(--light-violet));
+    position: relative;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    padding: 30px
+}
+
+section[class="cut-out"] {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: auto 0;
+    justify-self: center;
+}
+
+section[class="user"] {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+    position: relative;
+}
+
+section[class="previous"] {
+    display: grid;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+section[class="previous-top"] {
+    align-self: end;
+    width: 0;
+    height: 75%;
+    border: 1px solid white;
+    rotate: 45deg;
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+
+section[class="previous-bottom"] {
+    align-self: start;
+    width: 0;
+    height: 75%;
+    border: 1px solid white;
+    rotate: -45deg;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+section[class="user"] img {
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 1 /-1;
+}
+
+section[class="user-name"] {
+    font-size: large;
+    font-weight: 700;
+}
+
+section[class="user-status"] {
+    font-size: small;
+    font-weight: 400;
+    color: var(--grayish-blue);
+}
+
+section[class="bottom"] {
+    height: calc(100% - 100px);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    grid-template-columns: repeat(5, 20%);
+    grid-auto-rows: min-content;
+    display: grid;
+    width: 100%;
+    background-color: var(--light-grayish-violet-app-background);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+p[class="user-1"] {
+    background-color: #ede5f4;
+    grid-column: 1 / 4;
+    color: var(--moderate-violet);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: 800;
+}
+
+p[class="user-2"] {
+    border-radius: 5px;
+    grid-column: 3 / span 3;
+    text-align: unset;
+    justify-self: end;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+p[class="walk-price"] {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column: 1 / 5;
+    background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+    color: var(--light-grayish-violet-app-background);
+}
+
+section[class="feature"] {
+    color: var(--dark-grayish-violet-paragraph);
+}
+
+span[class="cost"] {
+    font-size: larger;
+    color: white;
+}
+
+h1 {
+    font-size: xx-large;
+    color: var(--very-dark-desaturated-violet);
+}
+
+section[class="images"] {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 /-1;
+    grid-column-start: 3;
+    grid-row: 3;
+}
+
+section[class="images"] img {
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    display: grid;
+}
