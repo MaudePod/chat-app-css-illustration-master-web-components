@@ -29,6 +29,7 @@ body {
     position: relative;
     font-weight: 500;
     font-family: 'Rubik';
+    place-items: center;
 }
 
 main {
@@ -38,18 +39,20 @@ main {
     grid-template-columns: auto 1fr;
     place-items: center;
     box-sizing: border-box;
-    padding: 10% 20%;
-    column-gap: 50px;
+    padding: 0% 10% 0% 15%;
+    max-width: 1440px;
+    max-height: 900px;
 }
 
 section[class="background-layer"] {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 30% 40% 30%;
     width: 100svw;
     height: 100svh;
     position: absolute;
+    top: 0;
     z-index: -1;
-    background-color: var(--light-grayish-violet-app-background);
+    background-color: white;
 }
 
 section[class="purple"] {
@@ -59,18 +62,32 @@ section[class="purple"] {
     border-bottom-left-radius: 153px;
 }
 
+section[class="light-purple"] {
+    background: linear-gradient(to top, var(--light-magenta), var(--light-violet));
+    height: 80%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 200px;
+    opacity: 0.05;
+    grid-column: 3;
+    align-self: end;
+}
+
 section[class="smart-phone"] {
     background-color: white;
     width: 300px;
-    height: 100%;
+    height: min-content;
     border-radius: 30px;
     box-sizing: border-box;
     padding: 10px;
     font-size: x-small;
+    transform: scale(0.7);
+    user-select: none;
+    -webkit-user-select: none;
+    box-shadow: 0px 0px 25px 0px ghostwhite;
 }
 
 section[class="top"] {
-    height: 100px;
+    height: 70px;
     display: grid;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -79,7 +96,8 @@ section[class="top"] {
     align-items: center;
     color: white;
     box-sizing: border-box;
-    padding: 30px
+    padding: 30px;
+    border-top: 1px solid white;
 }
 
 section[class="cut-out"] {
@@ -104,54 +122,35 @@ section[class="user"] {
 
 section[class="previous"] {
     display: grid;
-    align-items: center;
+    place-items: center;
     grid-column: 1;
     grid-row: 1 / -1;
+    font-size: 1.8em;
 }
 
-section[class="previous-top"] {
-    align-self: end;
-    width: 0;
-    height: 75%;
-    border: 1px solid white;
-    rotate: 45deg;
-    transform: translateY(5px);
-    cursor: pointer;
-}
-
-
-section[class="previous-bottom"] {
-    align-self: start;
-    width: 0;
-    height: 75%;
-    border: 1px solid white;
-    rotate: -45deg;
-    transform: translateY(-5px);
-    cursor: pointer;
-}
 
 section[class="user"] img {
     border: 2px solid white;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     grid-column: 2;
     grid-row: 1 /-1;
 }
 
 section[class="user-name"] {
-    font-size: large;
+    font-size: small;
     font-weight: 700;
 }
 
 section[class="user-status"] {
-    font-size: small;
+    font-size: x-small;
     font-weight: 400;
     color: var(--grayish-blue);
 }
 
 section[class="bottom"] {
-    height: calc(100% - 100px);
+    height: calc(100% - 70px);
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     grid-template-columns: repeat(5, 20%);
@@ -161,6 +160,10 @@ section[class="bottom"] {
     background-color: var(--light-grayish-violet-app-background);
     box-sizing: border-box;
     padding: 10px;
+}
+
+p {
+    margin: 5px;
 }
 
 p[class="user-1"] {
@@ -221,4 +224,39 @@ section[class="images"] img {
     height: 100%;
     border-radius: 5px;
     display: grid;
+}
+
+section[class="input"] {
+    height: 50px;
+    border-radius: 30px;
+    background-color: white;
+    width: 100%;
+    grid-column: 1 / -1;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    justify-self: end;
+    margin: 5px;
+    grid-template-columns: 1fr auto;
+}
+
+span[class="enter"] {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 1.8em;
+    background-color: var(--very-dark-desaturated-violet);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+div[class="attribution"] {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
