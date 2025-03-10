@@ -174,6 +174,17 @@ p[class="user-1"] {
     box-sizing: border-box;
     padding: 10px;
     font-weight: 800;
+    transition: ease-in 1s;
+
+}
+
+p[class="user-1"]:nth-of-type(2) {
+    transition-delay: 1s;
+
+}
+
+p[class="user-1"]:nth-of-type(5) {
+    transition-delay: 6s;
 }
 
 p[class="user-2"] {
@@ -186,6 +197,14 @@ p[class="user-2"] {
     padding: 10px;
 }
 
+p[class="user-2"]:nth-of-type(3) {
+    transition-delay: 3s;
+}
+
+p[class="user-2"]:nth-of-type(4) {
+    transition-delay: 4s;
+}
+
 p[class="walk-price"] {
     box-sizing: border-box;
     padding: 10px;
@@ -195,6 +214,14 @@ p[class="walk-price"] {
     grid-column: 1 / 5;
     background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
     color: var(--light-grayish-violet-app-background);
+}
+
+p[class="walk-price"]:nth-of-type(6) {
+    transition-delay: 7s;
+}
+
+p[class="walk-price"]:nth-of-type(7) {
+    transition-delay: 7.5s;
 }
 
 section[class="feature"] {
@@ -224,6 +251,18 @@ section[class="images"] img {
     height: 100%;
     border-radius: 5px;
     display: grid;
+}
+
+img:nth-of-type(1) {
+    transition-delay: 2.2s;
+}
+
+img:nth-last-of-type(2) {
+    transition-delay: 2.4s;
+}
+
+img:nth-of-type(3) {
+    transition-delay: 2.6s;
 }
 
 section[class="input"] {
@@ -259,4 +298,15 @@ div[class="attribution"] {
     left: 0;
     right: 0;
     margin: 0 auto;
+}
+
+
+
+@starting-style {
+    img,
+    p[class="user-1"],
+    p[class="user-2"],
+    p[class="walk-price"] {
+        opacity: 0;
+    }
 }
