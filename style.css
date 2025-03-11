@@ -34,14 +34,13 @@ body {
 
 main {
     display: grid;
-    height: 100cqh;
+    min-height: 100cqh;
     width: 100cqw;
     grid-template-columns: auto 1fr;
     place-items: center;
     box-sizing: border-box;
     padding: 0% 10% 0% 15%;
-    max-width: 1440px;
-    max-height: 900px;
+    position: relative;
 }
 
 section[class="background-layer"] {
@@ -72,224 +71,14 @@ section[class="light-purple"] {
     align-self: end;
 }
 
-section[class="smart-phone"] {
-    background-color: white;
-    width: 300px;
-    height: min-content;
-    border-radius: 30px;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: x-small;
-    transform: scale(0.7);
-    user-select: none;
-    -webkit-user-select: none;
-    box-shadow: 0px 0px 25px 0px ghostwhite;
-}
-
-section[class="top"] {
-    height: 70px;
-    display: grid;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    background: linear-gradient(to left, var(--light-magenta), var(--light-violet));
-    position: relative;
-    align-items: center;
-    color: white;
-    box-sizing: border-box;
-    padding: 30px;
-    border-top: 1px solid white;
-}
-
-section[class="cut-out"] {
-    width: 60%;
-    position: absolute;
-    top: 0;
-    background-color: white;
-    height: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    margin: auto 0;
-    justify-self: center;
-}
-
-section[class="user"] {
-    display: grid;
-    grid-template-columns: auto auto 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 10px;
-    position: relative;
-}
-
-section[class="previous"] {
-    display: grid;
-    place-items: center;
-    grid-column: 1;
-    grid-row: 1 / -1;
-    font-size: 1.8em;
-}
-
-
-section[class="user"] img {
-    border: 2px solid white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    grid-column: 2;
-    grid-row: 1 /-1;
-}
-
-section[class="user-name"] {
-    font-size: small;
-    font-weight: 700;
-}
-
-section[class="user-status"] {
-    font-size: x-small;
-    font-weight: 400;
-    color: var(--grayish-blue);
-}
-
-section[class="bottom"] {
-    height: calc(100% - 70px);
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    grid-template-columns: repeat(5, 20%);
-    grid-auto-rows: min-content;
-    display: grid;
-    width: 100%;
-    background-color: var(--light-grayish-violet-app-background);
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-p {
-    margin: 5px;
-}
-
-p[class="user-1"] {
-    background-color: #ede5f4;
-    grid-column: 1 / 4;
-    color: var(--moderate-violet);
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 10px;
-    font-weight: 800;
-    transition: ease-in 1s;
-
-}
-
-p[class="user-1"]:nth-of-type(2) {
-    transition-delay: 1s;
-
-}
-
-p[class="user-1"]:nth-of-type(5) {
-    transition-delay: 6s;
-}
-
-p[class="user-2"] {
-    border-radius: 5px;
-    grid-column: 3 / span 3;
-    text-align: unset;
-    justify-self: end;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-p[class="user-2"]:nth-of-type(3) {
-    transition-delay: 3s;
-}
-
-p[class="user-2"]:nth-of-type(4) {
-    transition-delay: 4s;
-}
-
-p[class="walk-price"] {
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-column: 1 / 5;
-    background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
-    color: var(--light-grayish-violet-app-background);
-}
-
-p[class="walk-price"]:nth-of-type(6) {
-    transition-delay: 7s;
-}
-
-p[class="walk-price"]:nth-of-type(7) {
-    transition-delay: 7.5s;
-}
 
 section[class="feature"] {
     color: var(--dark-grayish-violet-paragraph);
 }
 
-span[class="cost"] {
-    font-size: larger;
-    color: white;
-}
-
 h1 {
     font-size: xx-large;
     color: var(--very-dark-desaturated-violet);
-}
-
-section[class="images"] {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 /-1;
-    grid-column-start: 3;
-    grid-row: 3;
-}
-
-section[class="images"] img {
-    width: 80%;
-    height: 100%;
-    border-radius: 5px;
-    display: grid;
-}
-
-img:nth-of-type(1) {
-    transition-delay: 2.2s;
-}
-
-img:nth-last-of-type(2) {
-    transition-delay: 2.4s;
-}
-
-img:nth-of-type(3) {
-    transition-delay: 2.6s;
-}
-
-section[class="input"] {
-    height: 50px;
-    border-radius: 30px;
-    background-color: white;
-    width: 100%;
-    grid-column: 1 / -1;
-    display: grid;
-    align-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 20px;
-    justify-self: end;
-    margin: 5px;
-    grid-template-columns: 1fr auto;
-}
-
-span[class="enter"] {
-    display: grid;
-    place-items: center;
-    color: white;
-    font-size: 1.8em;
-    background-color: var(--very-dark-desaturated-violet);
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
 }
 
 div[class="attribution"] {
@@ -300,13 +89,55 @@ div[class="attribution"] {
     margin: 0 auto;
 }
 
+@container(inline-size < 800px) {
+    main {
+        grid-template-columns: 1fr;
+        place-items: center;
+        box-sizing: border-box;
+        padding: 0%;
+        padding-top: 20%;
+    }
 
+    section[class="background-layer"] {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background-color: white;
+    }
 
-@starting-style {
-    img,
-    p[class="user-1"],
-    p[class="user-2"],
-    p[class="walk-price"] {
-        opacity: 0;
+    section[class="light-purple"] {
+        display: none;
+    }
+
+    section[class="purple"] {
+        background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
+        height: 70%;
+        border-bottom-right-radius: 255px;
+        border-bottom-left-radius: 0px;
+    }
+
+    section[class="feature"] {
+        display: grid;
+        place-items: center;
+        color: var(--dark-grayish-violet-paragraph);
+        box-sizing: border-box;
+        padding: 10%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        text-wrap: nowrap;
+    }
+}
+
+@container(inline-size > 1440px) {
+    main {
+        max-width: 1440px;
+        max-height: 900px;
     }
 }

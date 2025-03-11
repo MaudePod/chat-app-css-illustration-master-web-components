@@ -29,77 +29,315 @@
     <section class="purple"></section>
     <section class="light-purple"></section>
   </section>
+
   <main>
-
-    <section class="smart-phone">
-      <section class="top">
-        <section class="cut-out"></section>
-
-        <section class="user">
-          <section class="previous">
-            <span>
-              <
-            </span>
+    <smart-phone>
+      <template shadowrootmode="open">
+        <section class="smart-phone">
+          <section class="top">
+            <section class="cut-out"></section>
+            <section class="user">
+              <section class="previous">
+                <span>
+                  < </span>
+              </section>
+              <img src="./images/avatar.jpg" alt="Avatar" width="256px" height="256px">
+              <section class="user-name">
+                Samuel Green
+              </section>
+              <section class="user-status">
+                Available to Walk
+              </section>
+            </section>
           </section>
-          <img src="./images/avatar.jpg" alt="Avatar" width="256px" height="256px">
-          <section class="user-name">
-            Samuel Green
-          </section>
-          <section class="user-status">
-            Available to Walk
+          <section class="bottom">
+            <p class="user-1">
+              That sounds great. I’d be happy with that.
+            </p>
+            <p class="user-1">
+              Could you send over some pictures of your dog, please?
+            </p>
+            <section class="images">
+              <img src="./images/dog-image-1.jpg" alt="Dog">
+              <img src="./images/dog-image-2.jpg" alt="Dog 2">
+              <img src="./images/dog-image-3.jpg" alt="Dog 3">
+            </section>
+            <p class="user-2">
+              Here are a few pictures. She’s a happy girl!
+            </p>
+            <p class="user-2">
+              Can you make it?
+            </p>
+            <p class="user-1">
+              She looks so happy! The time we discussed works. How long shall I take her out for?
+            </p>
+            <p class="walk-price">
+              <span class="time">
+                30 minute walk
+              </span>
+              <span class="cost">
+                $29
+              </span>
+            </p>
+            <p class="walk-price">
+              <span class="time">
+                1 hour walk
+              </span>
+              <span class="cost">
+                $49
+              </span>
+            </p>
+            <section class="input">
+              <span>
+                Type a message…
+              </span>
+              <span class="enter">></span>
+            </section>
           </section>
         </section>
-      </section>
-      <section class="bottom">
-        <p class="user-1">
-          That sounds great. I’d be happy with that.
-        </p>
-        <p class="user-1">
-          Could you send over some pictures of your dog, please?
-        </p>
-        <section class="images">
-          <img src="./images/dog-image-1.jpg" alt="Dog">
-          <img src="./images/dog-image-2.jpg" alt="Dog 2">
-          <img src="./images/dog-image-3.jpg" alt="Dog 3">
-        </section>
-        <p class="user-2">
-          Here are a few pictures. She’s a happy girl!
-        </p>
-        <p class="user-2">
-          Can you make it?
-        </p>
-        <p class="user-1">
-          She looks so happy! The time we discussed works. How long shall I take her out for?
-        </p>
+        <style>
+          section[class="smart-phone"] {
+            background-color: white;
+            color: var(--dark-grayish-violet-paragraph);
+            width: 300px;
+            height: min-content;
+            border-radius: 30px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: x-small;
+            transform: scale(0.7);
+            user-select: none;
+            -webkit-user-select: none;
+            box-shadow: 0px 0px 25px 0px ghostwhite;
+          }
 
-        <p class="walk-price">
-          <span class="time">
-            30 minute walk
-          </span>
-          <span class="cost">
-            $29
-          </span>
-        </p>
-        <p class="walk-price">
-          <span class="time">
-            1 hour walk
-          </span>
-          <span class="cost">
-            $49
-          </span>
-        </p>
+          section[class="top"] {
+            display: grid;
+            height: 70px;
+            align-items: center;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            background: linear-gradient(to left, var(--light-magenta), var(--light-violet));
+            position: relative;
+            color: white;
+            box-sizing: border-box;
+            padding: 30px;
+            border-top: 1px solid white;
+          }
 
-        <section class="input">
-          <span>
-  Type a message…
-          </span>
-          <span class="enter">></span>
-        </section>
-      </section>
-    </section>
+          section[class="cut-out"] {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            background-color: white;
+            height: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            margin: auto 0;
+            justify-self: center;
+          }
 
+          section[class="user"] {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            grid-template-rows: 1fr 1fr;
+            column-gap: 10px;
+            position: relative;
+          }
+
+          section[class="user"]::after {
+            content: '\2807';
+            position: absolute;
+            right: 0;
+            place-self: center;
+            font-size: 2em;
+          }
+
+
+          section[class="previous"] {
+            display: grid;
+            place-items: center;
+            grid-column: 1;
+            grid-row: 1 / -1;
+            font-size: 1.8em;
+          }
+
+
+          section[class="user"] img {
+            border: 2px solid white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            grid-column: 2;
+            grid-row: 1 /-1;
+          }
+
+          section[class="user-name"] {
+            font-size: small;
+            font-weight: 700;
+          }
+
+          section[class="user-status"] {
+            font-size: x-small;
+            font-weight: 400;
+            color: var(--grayish-blue);
+          }
+
+          section[class="bottom"] {
+            display: grid;
+            grid-auto-rows: min-content;
+            grid-template-columns: repeat(5, 20%);
+            height: calc(100% - 70px);
+            width: 100%;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-color: var(--light-grayish-violet-app-background);
+            box-sizing: border-box;
+            padding: 10px;
+          }
+
+          p {
+            margin: 5px;
+          }
+
+          p[class="user-1"] {
+            background-color: #ede5f4;
+            grid-column: 1 / 4;
+            color: var(--moderate-violet);
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            font-weight: 400;
+            transition: ease-in 1s;
+
+          }
+
+          p[class="user-1"]:nth-of-type(2) {
+            transition-delay: 1s;
+
+          }
+
+          p[class="user-1"]:nth-of-type(5) {
+            transition-delay: 6s;
+          }
+
+          p[class="user-2"] {
+            border-radius: 5px;
+            grid-column: 3 / span 3;
+            text-align: unset;
+            justify-self: end;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 10px;
+          }
+
+          p[class="user-2"]:nth-of-type(3) {
+            transition-delay: 3s;
+          }
+
+          p[class="user-2"]:nth-of-type(4) {
+            transition-delay: 4s;
+          }
+
+          p[class="walk-price"] {
+            display: grid;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            grid-template-columns: 1fr auto;
+            grid-column: 1 / 5;
+            background: linear-gradient(to right, var(--light-magenta), var(--light-violet));
+            color: var(--light-grayish-violet-app-background);
+          }
+
+          p[class="walk-price"]:nth-of-type(6) {
+            transition-delay: 7s;
+          }
+
+          p[class="walk-price"]:nth-of-type(7) {
+            transition-delay: 8s;
+          }
+
+          span[class="cost"] {
+            font-size: larger;
+            color: white;
+          }
+
+          section[class="images"] {
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-column: 1 /-1;
+            grid-column-start: 3;
+            grid-row: 3;
+          }
+
+          section[class="images"] img {
+            width: 80%;
+            height: 100%;
+            border-radius: 5px;
+            display: grid;
+          }
+
+          img:nth-of-type(1) {
+            transition-delay: 2.2s;
+          }
+
+          img:nth-last-of-type(2) {
+            transition-delay: 2.4s;
+          }
+
+          img:nth-of-type(3) {
+            transition-delay: 2.6s;
+          }
+
+          section[class="input"] {
+            display: grid;
+            align-content: center;
+            align-items: center;
+            justify-self: end;
+            grid-template-columns: 1fr auto;
+            height: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 30px;
+            background-color: white;
+            grid-column: 1 / -1;
+            padding: 20px;
+            margin: 5px;
+          }
+
+          span[class="enter"] {
+            display: grid;
+            place-items: center;
+            height: 30px;
+            width: 30px;
+            color: white;
+            font-size: 1.8em;
+            background-color: var(--very-dark-desaturated-violet);
+            border-radius: 50%;
+          }
+
+          @starting-style {
+
+            img:not(section[class="user"] img),
+            p[class="user-1"],
+            p[class="user-2"],
+            p[class="walk-price"] {
+              opacity: 0;
+            }
+          }
+
+          @container(inline-size < 800px) {
+            section[class="smart-phone"] {
+              width: 80cqw;
+              transform: unset;
+            }
+          }
+        </style>
+      </template>
+    </smart-phone>
+    
     <section class="feature">
-
       <h1>
         Simple booking
       </h1>
@@ -109,12 +347,11 @@
         your walker and book again all through the chat.
       </p>
     </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/MaudePod">Maude Pod</a>.
+    </div>
   </main>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/MaudePod">Maude Pod</a>.
-  </div>
 </body>
 
 </html>
